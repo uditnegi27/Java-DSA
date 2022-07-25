@@ -22,12 +22,11 @@ public class BubbleSort {
 					
 				}
 			}
+			
 			if(!flag) {
 				break;
 			}
 		}
-		
-		
 	}
 
 	public static void main(String[] args) {
