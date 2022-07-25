@@ -1,4 +1,4 @@
-package Sorting_Algorithm;
+package Searching_Algorithm;
 
 public class LinearSearch {
 	

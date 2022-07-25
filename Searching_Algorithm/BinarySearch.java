@@ -1,8 +1,8 @@
-package Sorting_Algorithm;
+package Searching_Algorithm;
 
-public class BinearySearch {
+public class BinarySearch {
 	
-	public static boolean binearySearch(int arr[], int startIndex, int lastIndex, int number) {
+	public static boolean binarySearch(int arr[], int startIndex, int lastIndex, int number) {
 		
 		while(startIndex<=lastIndex) {
 			int mid = (startIndex + lastIndex)/2;
@@ -19,7 +19,7 @@ public class BinearySearch {
 		return false;
 	}
 	
-	public static boolean binearySearch_recursion(int arr[], int startIndex, int lastIndex, int number) {
+	public static boolean binarySearch_recursion(int arr[], int startIndex, int lastIndex, int number) {
 		if(startIndex<=lastIndex) {
 			int mid = (startIndex + lastIndex)/2;
 			
@@ -28,11 +28,11 @@ public class BinearySearch {
 			}
 			
 			if(number < arr[mid]) {
-				return binearySearch_recursion(arr, startIndex, mid-1, number);
+				return binarySearch_recursion(arr, startIndex, mid-1, number);
 			}
 			
 			else {
-				return binearySearch_recursion(arr, mid+1, lastIndex, number);
+				return binarySearch_recursion(arr, mid+1, lastIndex, number);
 			}
 		}
 		
@@ -43,14 +43,14 @@ public class BinearySearch {
 		int arr[] = {1,2,3,4,5,6,7};
 	    int search  = 1;
 	    int search_2 = 10;
-	    if(binearySearch_recursion(arr, 0, arr.length-1, search)){
+	    if(binarySearch_recursion(arr, 0, arr.length-1, search)){
 	        System.out.println("Element "+search+" is present in the array");
 	    }
 	    else{
 	    	System.out.println("Element "+search+" is not present in the array");
 	    }
 	    
-	    if(binearySearch(arr, 0, arr.length-1, search_2)){
+	    if(binarySearch(arr, 0, arr.length-1, search_2)){
 	        System.out.println("Element "+search_2+" is present in the array");
 	    }
 	    else{
